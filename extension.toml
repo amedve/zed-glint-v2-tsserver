@@ -1,10 +1,12 @@
 id = "glint"
 name = "Glint v2 (via TypeScript LSP + tsserver-plugin)"
-version = "0.2.0"
+version = "0.3.2"
 schema_version = 1
 authors = ["Max Medve <artem@customer.io>"]
 description = "Routes .gts / .gjs files to typescript-language-server and loads @glint/tsserver-plugin so Glint v2 understands them."
-repository = "https://example.com/local"
+# TODO: replace with the real public GitHub URL before submitting to the Zed
+# extensions registry (the registry rejects non-resolvable repository URLs).
+repository = "https://github.com/REPLACE_ME/zed-glint-extension"
 
 # This server piggybacks on the languages defined by the published "Ember"
 # extension (jylamont/zed-ember). The language_ids remap is the crucial bit:
