@@ -1,0 +1,20 @@
+id = "glint"
+name = "Glint v2 (via TypeScript LSP + tsserver-plugin)"
+version = "0.2.0"
+schema_version = 1
+authors = ["Max Medve <artem@customer.io>"]
+description = "Routes .gts / .gjs files to typescript-language-server and loads @glint/tsserver-plugin so Glint v2 understands them."
+repository = "https://example.com/local"
+
+# This server piggybacks on the languages defined by the published "Ember"
+# extension (jylamont/zed-ember). The language_ids remap is the crucial bit:
+# it tells the underlying TS server to treat .gts as TypeScript and .gjs as
+# JavaScript, which lets tsserver open them and run the Glint plugin over
+# their <template> blocks.
+[language_servers.glint]
+name = "Glint via tsserver"
+languages = ["Glimmer (TypeScript)", "Glimmer (JavaScript)"]
+
+[language_servers.glint.language_ids]
+"Glimmer (TypeScript)" = "typescript"
+"Glimmer (JavaScript)" = "javascript"

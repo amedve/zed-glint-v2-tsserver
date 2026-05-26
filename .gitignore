@@ -1,0 +1,8 @@
+# Rust build artifacts
+/target/
+
+# Zed compiles this from src/ on install — no need to ship it
+extension.wasm
+
+# macOS
+.DS_Store
